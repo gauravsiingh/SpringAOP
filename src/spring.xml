@@ -6,6 +6,7 @@
 				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
 				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
+<aop:aspectj-autoproxy />
 
 	<bean name="triangle" class="com.gaurav.springAOP.model.Triangle">
 		<property name="name" value="Triangle name  "></property>
@@ -15,8 +16,8 @@
 		<property name="name" value="Circle name  "></property>
 	</bean>
 	
-	<bean name="shapeService" class="com.gaurav.springAOP.service.ShapeService" autowire="byName">
+	<bean name="shapeService" class="com.gaurav.springAOP.service.ShapeService" autowire="byName" />
 	
-	</bean>
+	<bean name="loggingAspect" class="com.gaurav.springAOP.aspect.LoggingAspect"  />
 
 </beans>
